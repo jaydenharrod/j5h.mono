@@ -1,9 +1,14 @@
 # Frontend Monolith
 
+## CLI
+
+- `pnpm run dev` run development environment
+- `pnpm run build` build static assets
+- `pnpm run lint` lint code
+- `pnpm run e2e:test` run tests against preview build
+
 ## Architecture Todo
 
-- `e2e`: cypress for automated portfolio testing
-- `branch-previews`: run e2e tests against preview branches on GitHub PR
 - `storybook`: previewing `ui` components
 - `tRPC/Prisma/zod`: e2e data type safety
 - `react-hook-form`: managing form state

@@ -1,0 +1,16 @@
+{
+  "name": "cypress",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd ../../apps/web && npm run start",
+    "e2e:run": "cypress run",
+    "e2e:dev": "cypress open",
+    "e2e:test": "start-server-and-test --expect 200 start http://0.0.0.0:3000 e2e:run"
+  },
+  "dependencies": {
+    "cypress": "^12.3.0",
+    "start-server-and-test": "^1.15.2",
+    "web": "workspace:*"
+  }
+}
