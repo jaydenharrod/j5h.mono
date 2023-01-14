@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "storybook dev -p 6006 --host 0.0.0.0",
+    "dev": "storybook dev -p 6006 --host 0.0.0.0 --ci",
     "build": "storybook build",
     "clean": "rm -rf .turbo node_modules"
   },

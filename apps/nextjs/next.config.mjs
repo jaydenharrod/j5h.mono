@@ -17,6 +17,11 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  webpack: (config) => {
+    config.externals = [...(config.externals || []), "@prisma/client"];
+    // Important: return the modified config
+    return config;
+  },
 };
 
 export default config;
