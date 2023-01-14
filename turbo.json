@@ -1,9 +1,31 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
+    "db:generate": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "db:push": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
+    },
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "dependsOn": ["^build", "^db:generate"],
+      "outputs": [".next/**", ".expo/**", ".dist/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    },
+    "type-check": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
     },
     "e2e:run": {
       "cache": false
@@ -13,15 +35,7 @@
     },
     "e2e:test": {
       "dependsOn": ["^build"]
-    },
-    "lint": {
-      "outputs": []
-    },
-    "dev": {
-      "cache": false
-    },
-    "clean": {
-      "cache": false
     }
-  }
+  },
+  "globalEnv": ["DATABASE_URL", "NEXTAUTH_SECRET", "NEXTAUTH_URL"]
 }

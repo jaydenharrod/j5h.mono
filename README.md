@@ -11,8 +11,8 @@
 
 - `storybook`: previewing `ui` components
 - `tRPC/Prisma/zod`: e2e data type safety
-- `react-hook-form`: managing form state
-- `dayjs`: handling date time
+- `simple-analytics`: data tracking
+- `sentry`: error tracking
 
 ## What's inside?
 
@@ -20,7 +20,7 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `nextjs`: create [t3](https://nextjs.org/) app w/ Prisma, NextAuth, tRPC
 - `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
 - `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
@@ -41,3 +41,5 @@ This Turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 - [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) for quick development
+- `react-hook-form`: managing form state
+- `dayjs`: handling date time

@@ -1,21 +1,25 @@
 {
+  "name": "mono-repo",
   "private": true,
+  "packageManager": "pnpm@7.22.0",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "e2e:run": "turbo run e2e:run",
-    "e2e:dev": "turbo run e2e:open",
-    "e2e:test": "turbo run e2e:test",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo build",
+    "clean": "rm -rf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push db:generate",
+    "dev": "turbo dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check"
   },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.15.0"
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.1",
+    "turbo": "latest",
+    "typescript": "^4.9.4"
+  }
 }
