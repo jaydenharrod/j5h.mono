@@ -2,6 +2,9 @@
   "name": "j5h.gg",
   "private": true,
   "packageManager": "pnpm@7.22.0",
+  "engines":{
+    "node": ">=18.13.0"
+  },
   "scripts": {
     "build": "turbo build",
     "clean": "rm -rf node_modules",

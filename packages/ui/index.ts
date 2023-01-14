@@ -1,3 +1,1 @@
-export default function HelloWorld() {
-  return "hi";
-}
+export { Button, type ButtonProps } from "./src/Button";

@@ -1,45 +1,29 @@
-# Frontend Monolith
+# j5h.mono
 
-## CLI
+## Commands
 
-- `pnpm run dev` run development environment
-- `pnpm run build` build static assets
+- `pnpm run db:generate` generate Prisma DB
+- `pnpm run db:push` push Prisma DB
+- `pnpm run dev` run development environments
+- `pnpm run build` build deployable assets
 - `pnpm run lint` lint code
 - `pnpm run e2e:test` run tests against preview build
-
-## Architecture Todo
-
-- `storybook`: previewing `ui` components
-- `tRPC/Prisma/zod`: e2e data type safety
-- `simple-analytics`: data tracking
-- `sentry`: error tracking
+- `pnpm run clean` delete .turbo and node_module caches
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This [TURBOREPO](https://turbo.build/) includes the following:
 
-### Apps and Packages
+### Apps
 
-- `nextjs`: create [t3](https://nextjs.org/) app w/ Prisma, NextAuth, tRPC
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `nextjs`: [create-t3-app](https://create.t3.gg/) web app (NextJS, TypeScript, tRPC, Prisma, NextAuth.js)
+- `native`: [react-native](https://reactnative.dev/) mobile app
+
+### Packages
+
+- `api`: shared tRPC api
+- `auth`: shared auth api
+- `db`: shared db
+- `ui`: reusable components (Mantine, Emotion, Storybook)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Building packages/ui
-
-This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.js` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) for quick development
-- `react-hook-form`: managing form state
-- `dayjs`: handling date time

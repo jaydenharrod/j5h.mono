@@ -6,7 +6,8 @@
     "start": "cd ../../apps/nextjs && npm run start",
     "e2e:run": "cypress run",
     "e2e:dev": "cypress open",
-    "e2e:test": "start-server-and-test --expect 200 start http://0.0.0.0:3000 e2e:run"
+    "e2e:test": "start-server-and-test --expect 200 start http://0.0.0.0:3000 e2e:run",
+    "clean": "rm -rf .turbo node_modules"
   },
   "dependencies": {
     "cypress": "^12.3.0",
