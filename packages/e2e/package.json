@@ -11,6 +11,6 @@
   "dependencies": {
     "cypress": "^12.3.0",
     "start-server-and-test": "^1.15.2",
-    "nextjs": "workspace:*"
+    "@j5h/nextjs": "*"
   }
 }
