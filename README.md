@@ -2,6 +2,7 @@
 
 ## Commands
 
+- `cp .env.example .env` get started
 - `pnpm run db:generate` generate Prisma DB
 - `pnpm run db:push` push Prisma DB
 - `pnpm run dev` run development environments
@@ -27,3 +28,12 @@ This [TURBOREPO](https://turbo.build/) includes the following:
 - `ui`: reusable components (Mantine, Emotion, Storybook)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### To Do
+
+- SEO: NextSEO integration
+- Translations: i18l-next integration
+- Forms: React Hook Form integration
+- Subscriptions: Paddle integration
+- Error Logging: Sentry integration
+- Data Collection: Plausible integration
